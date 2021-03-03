@@ -2,6 +2,59 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Helvetica Neue";
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+nav {
+  background-color: black;
+  position: relative;
+  padding: 10px;
+}
+nav div {
+  color: white;
+}
+nav #logo {
+  font-size: 38px;
+  margin-left: 5%;
+}
+nav .menu ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 25px;
+  position: absolute;
+  right: 12%;
+  top: 20px;
+}
+nav .menu ul li {
+  margin: 0 10%;
+}
+
+.container {
+  padding: 5%;
+}
+.container .banner {
+  display: flex;
+}
+.container .banner h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.container .banner .btnContainer {
+  display: flex;
+  height: 40px;
+}
+.container .banner .btnContainer button {
+  background: #CBB36D;
+  border: 1px solid #E2C87C;
+  border-radius: 5px;
+  padding: 0 30%;
+  font-size: 20px;
+  color: #FFFF;
+  margin: 0 0 0 20%;
 }
 
 /*# sourceMappingURL=styles.css.map */
