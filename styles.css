@@ -19,7 +19,7 @@ nav div {
   color: white;
 }
 nav #logo {
-  font-size: 38px;
+  font-size: 35px;
   margin-left: 5%;
 }
 nav .menu ul {
@@ -101,26 +101,23 @@ nav .menu ul li {
   grid-gap: 15px;
   margin: 15px 0 10%;
 }
-.container .calendarContainer #calendar #day {
+.container .calendarContainer #calendar .day {
   background: #FFFF;
   border: 1px solid #707070;
   position: relative;
+  text-align: right;
+  font-size: 18px;
+  padding: 5% 7%;
 }
-.container .calendarContainer #calendar #day:hover {
+.container .calendarContainer #calendar .day:hover {
   background: #FCF6E4;
   cursor: pointer;
-}
-.container .calendarContainer #calendar #day p {
-  font-size: 20px;
-  position: absolute;
-  right: 7%;
-  top: 7%;
 }
 .container .calendarContainer #calendar .current {
   background: #D6D6D6 !important;
   color: #FFFF;
 }
-.container .calendarContainer #calendar #padding {
+.container .calendarContainer #calendar .padding {
   background: #FFFF;
   border: 1px solid #707070;
 }
@@ -167,6 +164,74 @@ nav .menu ul li {
   position: absolute;
   bottom: 2%;
   left: 7.5%;
+}
+
+.background {
+  background-color: black;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modelContainer {
+  display: none;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+.modelContainer .model {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  height: 500px;
+  background: #FFFF;
+  padding: 5% 5% 2%;
+  border: 1px solid black;
+  z-index: 1;
+}
+.modelContainer .model .dateContainer p {
+  color: #707070;
+  font-size: 23px;
+}
+.modelContainer .model .dateContainer h2 {
+  font-weight: 400;
+  color: black;
+  font-size: 35px;
+}
+.modelContainer .model .inputContainer {
+  width: 100%;
+}
+.modelContainer .model .inputContainer input {
+  font-size: 23px;
+  padding: 1%;
+  width: 100%;
+}
+.modelContainer .model .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.modelContainer .model .btns button {
+  padding: 1.5% 3%;
+  font-size: 20px;
+  color: black;
+  background: #D6D6D6;
+  border: 1px solid #828282;
+  border-radius: 3px;
+}
+.modelContainer .model .btns button:nth-child(2) {
+  color: #FFFF;
+  background: #CBB36D;
+  border: 1px solid #E2C87C;
 }
 
 /*# sourceMappingURL=styles.css.map */

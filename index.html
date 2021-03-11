@@ -20,10 +20,10 @@
     </nav>
     <div class="container">
         <div class="banner">
-            <h2>Febuary 2021</h2>
+            <h2 id="myh2">Month Year</h2>
             <div class="btnContainer">
-                <button class="back">Back</button>
-                <button class="next">Next</button>
+                <button id="back">Back</button>
+                <button id="next">Next</button>
             </div>
         </div>
         <div class="secContainer">
@@ -42,54 +42,40 @@
         </div>
         <div class="calendarContainer">
             <div id="calendar">
-                <div id="padding"></div>
-                <div id="padding"></div>
-                <div id="padding"></div>
-                <div id="day"><p>1</p></div>
-                <div id="day"><p>2</p></div>
-                <div id="day"><p>3</p></div>
-                <div id="day"><p>4</p></div>
-                <div id="day"><p>5</p></div>
-                <div id="day"><p>6</p></div>
-                <div id="day"><p>7</p></div>
-                <div id="day"><p>8</p></div>
-                <div id="day"><p>9</p></div>
-                <div id="day"><p>10</p></div>
-                <div id="day"><p>11</p></div>
-                <div id="day"><p>12</p></div>
-                <div id="day"><p>13</p></div>
-                <div id="day"><p>14</p></div>
-                <div id="day"><p>15</p></div>
-                <div id="day"><p>16</p></div>
-                <div id="day"><p>17</p></div>
-                <div id="day"><p>18</p></div>
-                <div id="day"><p>19</p></div>
-                <div id="day"><p>20</p></div>
-                <div id="day"><p>21</p></div>
-                <div id="day"><p>22</p></div>
-                <div id="day"><p>23</p></div>
-                <div id="day"><p>24</p></div>
-                <div id="day" class="current"><p>25</p></div>
-                <div id="day"><p>26</p></div>
-                <div id="day"><p>27</p></div>
-                <div id="day"><p>28</p></div>
-                <div id="day"><p>29</p></div>
-                <div id="day"><p>30</p></div>
-                <div id="day"><p>31</p></div>
-                <div id="padding"></div>
+                <!-- <div class="padding"></div>
+                <div class="day"><p>1</p></div>
+                <div class="current"><p>25</p></div> -->
+            </div>
+            <div id="appointment">
+                <div class="time"><p>9:00am - 10:00am</p></div>
+                <div class="time"><p>10:00am - 11:00am</p></div>
+                <div class="time taken"><p>11:00am - 12:00pm</p></div>
+                <div class="time"><p>12:00pm - 1:00pm</p></div>
+                <div class="time"><p>1:00pm - 2:00pm</p></div>
+                <div class="time taken"><p>2:00pm - 3:00pm</p></div>
+                <div class="time"><p>3:00pm - 4:00pm</p></div>
+                <div class="time"><p>4:00pm - 5:00pm</p></div>
+                <button>Set Appointment</button>
+            </div>
         </div>
-        <div id="appointment">
-            <div class="time"><p>9:00am - 10:00am</p></div>
-            <div class="time"><p>10:00am - 11:00am</p></div>
-            <div class="time taken"><p>11:00am - 12:00pm</p></div>
-            <div class="time"><p>12:00pm - 1:00pm</p></div>
-            <div class="time"><p>1:00pm - 2:00pm</p></div>
-            <div class="time taken"><p>2:00pm - 3:00pm</p></div>
-            <div class="time"><p>3:00pm - 4:00pm</p></div>
-            <div class="time"><p>4:00pm - 5:00pm</p></div>
-            <button>Set Appointment</button>
+        <div class="modelContainer">
+
+            <div class="model">
+                <div class="dateContainer">
+                    <p>Date</p>
+                    <h2>Feb. 23 2021, 11:00am</h2>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="btns">
+                    <button>Cancel</button>
+                    <button>Confirm</button>
+                </div>
+            </div>
+            <div class="background"></div>
         </div>
-        </div>
-    <script src="app.js"></script>
+    </div>
+    <script src="./app.js"></script>
 </body>
 </html>
