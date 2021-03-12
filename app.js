@@ -7,6 +7,11 @@ const backBtn = document.getElementById('back');
 let nav = 0;
 let clicked = null;
 
+let sundayDates=[];
+let saturdaysDates=[];
+let weekDaysDates=[];
+const calSquares = document.getElementsByClassName('day');
+
 let dt = new Date();
 
 let day = dt.getDate();
@@ -29,10 +34,8 @@ function load() {
     let lastDay = new Date(year, month, 0);
 
     let lastDayofCurrent = new Date(year, month+1, 0);
-    // let x = lastDayofCurrent.getDate()
-    // console.log(x)
+
     let lastDayName = lastDay.toLocaleDateString('en-US', {weekday:'long'});
-    //console.log(lastDayName);
 
     for(let i=0; i<week.length; i++){
         if (lastDayName == week[i]){
@@ -47,6 +50,9 @@ function load() {
             let squareNum = i - padDay + 1;
             square.innerHTML = squareNum;
             square.classList.add('day');
+            square.addEventListener('click', ()=>{
+                clicked = parseInt(square.innerText);
+            })
         } else{
             square.classList.add('padding');
         }
@@ -80,31 +86,26 @@ backBtn.addEventListener('click', ()=>{
     calendar.innerHTML='';
     month--;
     load();
-    weekSorter();
+    dateSaver();
 });
 
 nextBtn.addEventListener('click', ()=>{
     calendar.innerHTML='';
     month++;
     load();
-    weekSorter();
+    dateSaver();
 });
 
 
-let sundayDates=[];
-let saturdaysDates=[];
-let weekDaysDates=[];
 
-function weekSorter(){
+function dateSaver(){
 
     let lastDay = new Date(year, month+1, 0).getDate();
-    
-    sundayDates=[];
+
+    sundaysDates=[];
     saturdaysDates=[];
     weekDaysDates=[];
 
-
-    //console.log(lastDay);
 
     for (let i=1; i<=lastDay; i++){
         let day = new Date(year, month, i);
@@ -113,19 +114,26 @@ function weekSorter(){
         let dayName = day.toLocaleDateString('en-US', {weekday:'long'});
 
         if(dayName == 'Sunday'){
-            sundayDates.push(date);
+            sundaysDates.push(date);
         } else if(dayName == 'Saturday'){
             saturdaysDates.push(date);
         } else{
             weekDaysDates.push(date);
         }
-        console.log(date);
-        console.log(dayName);
     }
-    //return console.log(dayName);
 
+
+    function check(arg, i){
+        if(arg.toString() == calendar.children[i].innerText){
+            //console.log(arg);
+            calendar.children[i].style.background="blue";
+        }
+    }
+
+    for(let i=0; i<=lastDay; i++){
+        saturdaysDates.forEach(element => check(element, i));
+    }
 }
 
-
 load();
-weekSorter();
+dateSaver();
