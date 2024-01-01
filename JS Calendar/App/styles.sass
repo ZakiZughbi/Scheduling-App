@@ -1,0 +1,204 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Helvetica Neue'
+
+body
+    background-color: #EFEFEF
+
+nav
+    background-color: black
+    position: relative
+    padding: 10px
+    font-weight: 300
+    div
+        color: white
+    #logo
+        font-size: 35px
+        margin-left: 5%
+    .menu
+        ul
+            display: flex
+            list-style-type: none
+            font-size: 25px
+            position: absolute
+            right: 12%
+            top: 20px
+            li
+                margin: 0 10%
+
+.container
+    padding: 2% 5%
+    max-width: 1250px
+    margin: 0 auto !important
+    .banner
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+        h2
+            font-size: 40px
+            font-weight: 400
+        .btnContainer
+            display: flex
+            width: 19%
+            padding: 7px 0
+            justify-content: space-between
+            button
+                background: #CBB36D
+                border: 1px solid #E2C87C
+                border-radius: 3px
+                padding: 0 12%
+                font-size: 20px
+                color: #FFFF
+    .secContainer
+        background-color: #9A9A9A
+        padding: 7px 0
+        display: flex
+        color: #FFFF
+        font-size: 22px
+        font-weight: 300
+        justify-content: space-between
+
+        .week
+            width: 77%
+            ul
+                display: flex
+                justify-content: space-around
+                list-style-type: none
+                li
+                    width: 70px
+                    margin-right: 13px
+                    text-align: center
+
+        .timeTitle
+            display: flex
+            justify-content: center
+            width: 23%
+    .calendarContainer
+        display: flex
+        #calendar
+            width: 77%
+            height: 575px
+            display: grid
+            grid-template-columns: repeat(7, 1fr)
+            grid-auto-rows: 20%
+            grid-gap: 15px
+            margin: 15px 0 10%
+            .day
+                background: #FFFF
+                border: 1px solid #707070
+                position: relative
+                text-align: right
+                font-size: 18px
+                padding: 5% 7%
+                &:hover
+                    background: #FCF6E4
+                    cursor: pointer
+            .current
+                background: #D6D6D6 !important
+                color: #FFFF
+
+            .padding
+                background: #FFFF
+                border: 1px solid #707070
+        #appointment
+            text-align: center
+            position: relative
+            width: 23%
+            height: 575px + 60px
+            margin: 15px 0 0 15px
+            background-color: #FFFF
+            border: 1px solid #707070
+            .time
+                margin: 6% 7%
+                padding: 5%
+                background-color: #FFFF
+                border: 1px solid #CBB36D
+                border-radius: 5px
+                display: flex
+                justify-content: center
+                font-size: 20px
+                &:hover
+                    background: #FCF6E4
+                    cursor: pointer
+            .taken
+                background-color: #D6D6D6
+                border: 1px solid #888888
+                color: #888888
+                &:hover
+                    background: #D6D6D6
+                    cursor: default
+
+            button
+                background: #CBB36D
+                border: 1px solid #E2C87C
+                border-radius: 3px
+                padding: 5% 0
+                width: 85%
+                font-size: 20px
+                color: #FFFF
+                position: absolute
+                bottom: 2%
+                left: 7.5%
+
+.background
+    background-color: black
+    opacity: 0.7
+    position: fixed
+    width: 100%
+    height: 100%
+    //z-index: 11
+    top: 0
+    left: 0
+
+.modelContainer
+    display: none
+    position: relative
+    top: 0%
+    left: 0%
+    width: 100%
+    height: 100%
+    .model
+        position: fixed
+        display: flex
+        flex-wrap: wrap
+        top: 10%
+        left: 25%
+        width: 50%
+        height: 500px
+        background: #FFFF
+        padding: 5% 5% 2%
+        border: 1px solid black
+        z-index: 1
+
+        .dateContainer
+            p
+                color: #707070
+                font-size: 23px
+            h2
+                font-weight: 400
+                color: black
+                font-size: 35px
+        .inputContainer
+            width: 100%
+            input
+                font-size: 23px
+                padding: 1%
+                width: 100%
+        .btns
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            button
+                padding: 1.5% 3%
+                font-size: 20px
+                color: black
+                background: #D6D6D6
+                border: 1px solid #828282
+                border-radius: 3px
+                &:nth-child(2)
+                    color: #FFFF
+                    background: #CBB36D
+                    border: 1px solid #E2C87C
